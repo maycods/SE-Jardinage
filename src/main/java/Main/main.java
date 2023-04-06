@@ -10,7 +10,7 @@ public class main {
         br.add(new Regle(new ArrayList(Arrays.asList("Bien drainé","6<Ph<7", "Régulier")), "classe1", 0));
         br.add(new Regle(new ArrayList(Arrays.asList("Ph<6", "Mal drainé", "Humide")), "classe2", 1));
         br.add(new Regle(new ArrayList(Arrays.asList("classe1", "Plein soleil")), "catégorieA", 2));
-        br.add(new Regle(new ArrayList(Arrays.asList("chaud", "Plein soleil", "bien drainé", "Grand")), "classe4", 3));
+        br.add(new Regle(new ArrayList(Arrays.asList("Chaud", "Plein soleil", "bien drainé", "Grand")), "classe4", 3));
         br.add(new Regle(new ArrayList(Arrays.asList("ph<6", "Humide", "Petit" )), "classe3", 4));
         br.add(new Regle(new ArrayList(Arrays.asList("classe3", "Grand" )), "Pastèque", 5));
         br.add(new Regle(new ArrayList(Arrays.asList("classe3", "Modérément drainé" )), "Gingembre", 6));

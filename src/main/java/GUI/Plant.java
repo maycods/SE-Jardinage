@@ -1,5 +1,7 @@
 package GUI;
 
+import java.util.ArrayList;
+
 public enum Plant {
     Bégonias("Bégonias"),
     Epinards("Epinards"),
@@ -23,7 +25,19 @@ public enum Plant {
     Géranium("Géranium") ,
     Pastèque("Pastèque"),;
 
+    private String s;
     Plant(String s){
-
+        this.s = s;
     }
+    public String getValue(){
+        return s;
+    }
+    public static ArrayList<String> getVals(){
+        ArrayList<String> vals = new ArrayList<>();
+        for(Plant p : Plant.values()){
+            vals.add(p.getValue());
+        }
+        return vals;
+    }
+
 }
