@@ -7,10 +7,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <Pane id="body" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="626.0" prefWidth="650.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane id="back" prefHeight="626.0" prefWidth="663.0" />
+      <Pane id="back" layoutX="14.0" layoutY="20.0" prefHeight="626.0" prefWidth="663.0" />
       <Button id="check" layoutX="281.0" layoutY="536.0" mnemonicParsing="false" styleClass="buttonMain" text="Check">
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -62,5 +63,6 @@
          <font>
             <Font size="36.0" />
          </font></Label>
+      <Text id="result" layoutX="8.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resultTitle" textAlignment="CENTER" wrappingWidth="634.13671875" />
    </children>
 </Pane>

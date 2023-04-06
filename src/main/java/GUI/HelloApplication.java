@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,7 +20,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setHeight(650);
+        stage.setHeight(675);
         stage.setWidth(655);
         stage.setTitle("Plants Advisor");
         stage.setScene(scene);
@@ -32,6 +34,8 @@ public class HelloApplication extends Application {
         ChoiceBox eau = (ChoiceBox) scene.lookup("#eau");
         ChoiceBox ph = (ChoiceBox) scene.lookup("#ph");
         ChoiceBox plants = (ChoiceBox) scene.lookup("#plant");
+
+        Text result = (Text) scene.lookup("#result");
         soleil.getItems().addAll(Soleil.getVals());
         System.out.println(Soleil.getVals());
         saison.getItems().addAll(Saison.getVals());
@@ -42,18 +46,28 @@ public class HelloApplication extends Application {
         drainage.getItems().addAll(Drainage.getVals());
 
         check.setOnAction(event -> {
-            System.out.println("Drainage: " + drainage.getValue().toString());
-            System.out.println("Soleil: " + soleil.getValue());
-            System.out.println("Saison: " + saison.getValue());
-            System.out.println("Espace: " + espace.getValue());
-            System.out.println("Eau: " + eau.getValue());
-            System.out.println("PH: " + ph.getValue());
-            System.out.println("Plants: " + plants.getValue().toString());
+
+            //check if the hasn't been selected
+            if (drainage.getValue() == null || soleil.getValue() == null || saison.getValue() == null
+                    || espace.getValue() == null || eau.getValue() == null || ph.getValue() == null || plants.getValue() == null){
+                result.setText("Veuillez remplir tous les champs");
+                return;
+            }
             var br = loadRegles();
             ArrayList<String> bdf = new ArrayList(Arrays.asList(drainage.getValue(), soleil.getValue(), saison.getValue()
                     ,espace.getValue(), eau.getValue(), ph.getValue()));
             MoteurInference chainAv = new MoteurInference(bdf, br);
-            System.out.println(chainAv.raisonnement( plants.getValue().toString()));
+            if (chainAv.raisonnement(plants.getValue().toString()) == null)
+                result.setText("Pas de plantes trouvées");
+            else{
+                if(chainAv.raisonnement(plants.getValue().toString())){
+                    result.styleProperty().setValue("-fx-text-fill: #2f9c95");
+                    result.setText("True !");
+                }else {
+                    result.styleProperty().setValue("-fx-text-fill: red");
+                    result.setText("False !");
+                }
+            }
         });
     }
     private static ArrayList<Regle> loadRegles(){
