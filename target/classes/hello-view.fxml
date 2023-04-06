@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
@@ -10,7 +11,11 @@
 <Pane id="body" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="626.0" prefWidth="650.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane id="back" prefHeight="626.0" prefWidth="663.0" />
-      <Button id="check" layoutX="281.0" layoutY="536.0" mnemonicParsing="false" styleClass="buttonMain" text="Check" />
+      <Button id="check" layoutX="281.0" layoutY="536.0" mnemonicParsing="false" styleClass="buttonMain" text="Check">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
       <ChoiceBox id="plant" layoutX="225.0" layoutY="454.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
       <Label layoutX="296.0" layoutY="409.0" styleClass="TitleMain" stylesheets="@styles.css" text="Plant">
          <opaqueInsets>

@@ -1,9 +1,9 @@
 package GUI;
 
 public enum Eau {
-    Humide("humide"),
-    Regulier("regulier"),
-    Rarement("rarement"),;
+    Humide("Humide"),
+    Regulier("Régulier"),
+    Rarement("Rarement"),;
     Eau(String s ){
 
     }

@@ -1,9 +1,9 @@
 package GUI;
 
 public enum Saison {
-    Chaude("chaude"),
-    Froide("froide"),
-    Temperee("temperee"),
+    Chaud("Chaud"),
+    Froid("Froid"),
+    Tempere("Tempéré"),
     ;
 
     Saison(String s){

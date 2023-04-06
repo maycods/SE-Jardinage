@@ -1,7 +1,7 @@
 package GUI;
 
 public enum Espace {
-    Grand("grande"),
+    Grand("grand"),
     Petit("petit"),
     ;
     Espace(String s){
