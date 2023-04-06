@@ -1,16 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="GUI.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<Pane id="body" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="626.0" prefWidth="650.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane id="back" prefHeight="626.0" prefWidth="663.0" />
+      <Button id="check" layoutX="281.0" layoutY="536.0" mnemonicParsing="false" styleClass="buttonMain" text="Check" />
+      <ChoiceBox id="plant" layoutX="225.0" layoutY="454.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
+      <Label layoutX="296.0" layoutY="409.0" styleClass="TitleMain" stylesheets="@styles.css" text="Plant">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="40.0" layoutY="148.0" styleClass="choiceTitle" stylesheets="@styles.css" text="Drainage du Sol">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="40.0" layoutY="243.0" styleClass="choiceTitle" stylesheets="@styles.css" text="Season">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="40.0" layoutY="328.0" styleClass="choiceTitle" stylesheets="@styles.css" text="Eau">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="412.0" layoutY="148.0" styleClass="choiceTitle" stylesheets="@styles.css" text="Soleil">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="412.0" layoutY="243.0" styleClass="choiceTitle" stylesheets="@styles.css" text="espace">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="412.0" layoutY="328.0" styleClass="choiceTitle" stylesheets="@styles.css" text="Ph">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <ChoiceBox id="drainage" layoutX="39.0" layoutY="175.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
+      <ChoiceBox id="soleil" layoutX="412.0" layoutY="175.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
+      <ChoiceBox id="season" layoutX="39.0" layoutY="269.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
+      <ChoiceBox id="eau" layoutX="39.0" layoutY="353.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
+      <ChoiceBox id="espace" layoutX="412.0" layoutY="269.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
+      <ChoiceBox id="ph" layoutX="412.0" layoutY="353.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
+      <Label layoutX="141.0" layoutY="28.0" styleClass="title" stylesheets="@styles.css" text="Plants Advisor">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+   </children>
+</Pane>

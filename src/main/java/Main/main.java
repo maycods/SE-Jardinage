@@ -42,7 +42,6 @@ public class main {
         br.add(new Regle(new ArrayList(Arrays.asList("classe4","Rarement")), "Cactus", 8));
         br.add(new Regle(new ArrayList(Arrays.asList("classe4","Rarement")), "Aloe vera", 8));
 
-
         ArrayList<String> bdf = new ArrayList(Arrays.asList("Rarement", "chaud", "Plein soleil", "bien drainé", "Grand"));
         MoteurInference chainAv = new MoteurInference(bdf, br);
         System.out.println(chainAv.raisonnement("Cactus"));

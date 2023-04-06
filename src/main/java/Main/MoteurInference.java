@@ -15,13 +15,7 @@ public class MoteurInference {
             Regle r ;
             while(!BDF.contains(a) && !BR.isEmpty() && Applicable() ){
 
-                RA.sort(new Comparator<Regle>() {
-                    @Override
-                    public int compare(Regle o1, Regle o2) {
-
-                        return o1.premise.size()>o2.premise.size()? -1:((o1.premise.size()<o2.premise.size()?1:(o1.indice>o2.indice?1:-1) )   );
-                    }
-                });
+                RA.sort((o1, o2) -> o1.premise.size()>o2.premise.size()? -1:((o1.premise.size()<o2.premise.size()?1:(o1.indice>o2.indice?1:-1) )   ));
                 r  = RA.get(0);
 
                 BDF.add(r.conclusion);

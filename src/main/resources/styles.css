@@ -1,0 +1,61 @@
+#back {
+    -fx-background-image: url("cactus.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-opacity: 0.45;
+}
+
+#body{
+    -fx-background-color:  #EBEBD3;
+}
+.title{
+    -fx-font-family: "Arial";
+    -fx-font-size: 36px;
+    -fx-text-alignment: center;
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 3px 0;
+    -fx-border-color: #2f9c95;
+    -fx-padding: 10px 58px;
+    -fx-font-weight: bold;
+}
+.choiceTitle{
+    -fx-font-size: 20px;
+    -fx-padding: 0 0 12px 0px;
+    -fx-font-weight: bold;
+
+    -fx-font-family: "Arial";
+}
+.choiceBox{
+/*    a choice box that is transparent and have an underline border*/
+    -fx-background-color: transparent;
+    -fx-border-color: #2f9c95;
+    -fx-border-width: 0 0 3px 0;
+    -fx-border-style: solid;
+    -fx-padding: 0 0 0 0;
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: #2f9c95;
+    -fx-font-weight: bold;
+/*    add width*/
+    -fx-pref-width: 200px;
+}
+.TitleMain{
+
+    -fx-font-family: "Arial";
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+.buttonMain{
+    -fx-background-color: #40C9A2;
+    -fx-text-fill: #EBEBD3;
+    -fx-font-family: "Arial";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+.buttonMain :hover{
+
+
+}
