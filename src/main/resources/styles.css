@@ -1,54 +1,56 @@
 #back {
-    -fx-background-image: url("cactus.png");
+    -fx-background-image: url("vrt3.jpg");
     -fx-background-repeat: no-repeat;
-    -fx-background-size: contain;
-    -fx-opacity: 0.45;
-}
-
-#body{
-    -fx-background-color:  #EBEBD3;
+    -fx-background-size: 100% 100%;
+    -fx-padding: 0;
+    -fx-margin: 0;
 }
 .title{
-    -fx-font-family: "Arial";
+    -fx-font-family: "VAG Rounded bold";
+
     -fx-font-size: 36px;
+    -fx-text-fill: white;
+    -fx-border-color: white;
     -fx-text-alignment: center;
     -fx-border-style: solid;
     -fx-border-width: 0 0 3px 0;
-    -fx-border-color: #2f9c95;
+
     -fx-padding: 10px 58px;
     -fx-font-weight: bold;
 }
 .choiceTitle{
     -fx-font-size: 20px;
     -fx-padding: 0 0 12px 0px;
+    -fx-text-fill: white;
     -fx-font-weight: bold;
-
-    -fx-font-family: "Arial";
+    -fx-font-family: "VAG Rounded Bold";
 }
 .choiceBox{
 /*    a choice box that is transparent and have an underline border*/
     -fx-background-color: transparent;
-    -fx-border-color: #2f9c95;
+    -fx-border-color: white ;
+    -fx-text-fill:white;
     -fx-border-width: 0 0 3px 0;
     -fx-border-style: solid;
     -fx-padding: 0 0 0 0;
-    -fx-font-size: 16px;
-    -fx-font-family: "Arial";
-    -fx-text-fill: #2f9c95;
+    -fx-font-size: 17px;
+    -fx-font-family: "VAG Rounded Bold";
     -fx-font-weight: bold;
+
 /*    add width*/
     -fx-pref-width: 200px;
 }
 .TitleMain{
 
-    -fx-font-family: "Arial";
+    -fx-font-family: "VAG Rounded Bold";
     -fx-font-size: 24px;
+    -fx-text-fill: White;
     -fx-font-weight: bold;
 }
-.buttonMain{
-    -fx-background-color: #40C9A2;
-    -fx-text-fill: #EBEBD3;
-    -fx-font-family: "Arial";
+.buttonMain{/*e5f9e0*/
+    -fx-background-color: #708c64;
+    -fx-text-fill: white;
+    -fx-font-family: "VAG Rounded Bold";
     -fx-font-size: 16px;
     -fx-font-weight: bold;
     -fx-padding: 10px 20px;
@@ -59,7 +61,7 @@
 /*hover effect*/
     -fx-background-color: #a3f7b5;
     -fx-text-fill: #EBEBD3;
-    -fx-font-family: "Arial";
+    -fx-font-family: "VAG Rounded Bold";
     -fx-font-size: 16px;
     -fx-font-weight: bold;
     -fx-padding: 10px 20px;
@@ -68,8 +70,9 @@
 
 }
 .resultTitle{
-    -fx-font-family: "Arial";
+    -fx-font-family: "VAG Rounded Bold";
     -fx-text-alignment: center;
     -fx-font-size: 20px;
     -fx-font-weight: bold;
+    -fx-text-fill: white;
 }

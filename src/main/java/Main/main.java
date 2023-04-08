@@ -18,7 +18,6 @@ public class main {
         br.add(new Regle(new ArrayList(Arrays.asList("catégorieA", "Tempéré")), "Pétunias", 7));
         br.add(new Regle(new ArrayList(Arrays.asList("catégorieA", "Chaud")), "Basilic", 7));
         br.add(new Regle(new ArrayList(Arrays.asList("catégorieA", "Chaud")), "œillets", 7));
-        br.add(new Regle(new ArrayList(Arrays.asList("catégorieA", "Chaud")), "Roses", 7));
         br.add(new Regle(new ArrayList(Arrays.asList("catégorieA", "Chaud")), "Tomates", 7));
         br.add(new Regle(new ArrayList(Arrays.asList("classe4", "Humide")), "Géranium", 8));
 

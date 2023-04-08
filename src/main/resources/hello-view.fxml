@@ -9,9 +9,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane id="body" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="626.0" prefWidth="650.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane id="back" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="626.0" prefWidth="650.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane id="back" layoutX="14.0" layoutY="20.0" prefHeight="626.0" prefWidth="663.0" />
+      <Pane  layoutX="14.0" layoutY="20.0" prefHeight="626.0" prefWidth="663.0" />
       <Button id="check" layoutX="281.0" layoutY="536.0" mnemonicParsing="false" styleClass="buttonMain" text="Check">
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -43,7 +43,7 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <Label layoutX="412.0" layoutY="243.0" styleClass="choiceTitle" stylesheets="@styles.css" text="espace">
+      <Label layoutX="412.0" layoutY="243.0" styleClass="choiceTitle" stylesheets="@styles.css" text="Espace">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>

@@ -8,6 +8,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -23,6 +25,8 @@ public class HelloApplication extends Application {
         stage.setHeight(675);
         stage.setWidth(655);
         stage.setTitle("Plants Advisor");
+        Image icon = new Image("file:C:/Users/mayah/Documents/GitHub/demo/src/main/resources/icon.png"); // Replace "icon.png" with your actual icon image file
+        stage.getIcons().add(icon);
         stage.setScene(scene);
         stage.show();
 
@@ -49,22 +53,24 @@ public class HelloApplication extends Application {
 
             //check if the hasn't been selected
             if (drainage.getValue() == null || soleil.getValue() == null || saison.getValue() == null
-                    || espace.getValue() == null || eau.getValue() == null || ph.getValue() == null || plants.getValue() == null){
+                    || espace.getValue() == null || eau.getValue() == null || ph.getValue() == null || plants.getValue() == null) {
+                result.setFill(Color.WHITE);
                 result.setText("Veuillez remplir tous les champs");
                 return;
             }
             var br = loadRegles();
             ArrayList<String> bdf = new ArrayList(Arrays.asList(drainage.getValue(), soleil.getValue(), saison.getValue()
-                    ,espace.getValue(), eau.getValue(), ph.getValue()));
+                    , espace.getValue(), eau.getValue(), ph.getValue()));
             MoteurInference chainAv = new MoteurInference(bdf, br);
-            if (chainAv.raisonnement(plants.getValue().toString()) == null)
-                result.setText("Pas de plantes trouvées");
-            else{
+            if (chainAv.raisonnement(plants.getValue().toString()) == null){
+                result.setFill(Color.WHITE);
+            result.setText("Pas de plantes trouvées");
+        }else{
                 if(chainAv.raisonnement(plants.getValue().toString())){
-                    result.styleProperty().setValue("-fx-text-fill: #2f9c95");
+                    result.setFill(Color.WHITE);
                     result.setText("True !");
                 }else {
-                    result.styleProperty().setValue("-fx-text-fill: red");
+                    result.setFill(Color.WHITE);
                     result.setText("False !");
                 }
             }
@@ -84,7 +90,6 @@ public class HelloApplication extends Application {
         br.add(new Regle(new ArrayList<>(Arrays.asList("catégorieA", "Tempéré")), "Pétunias", 7));
         br.add(new Regle(new ArrayList<>(Arrays.asList("catégorieA", "Chaud")), "Basilic", 7));
         br.add(new Regle(new ArrayList<>(Arrays.asList("catégorieA", "Chaud")), "œillets", 7));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("catégorieA", "Chaud")), "Roses", 7));
         br.add(new Regle(new ArrayList<>(Arrays.asList("catégorieA", "Chaud")), "Tomates", 7));
         br.add(new Regle(new ArrayList<>(Arrays.asList("classe4", "Humide")), "Géranium", 8));
 
