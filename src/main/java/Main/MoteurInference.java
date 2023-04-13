@@ -1,11 +1,11 @@
 package Main;
 import java.util.ArrayList;
-import java.util.Comparator;
 public class MoteurInference {
 
         ArrayList<String> BDF ;
         ArrayList<Regle>BR ;
         ArrayList<Regle>RA =new ArrayList<Regle>();
+       public ArrayList<String>PossiblePlants =new ArrayList<String>();
 
         public MoteurInference( ArrayList<String> bdf,ArrayList<Regle> br){
             BDF=bdf;
@@ -15,14 +15,13 @@ public class MoteurInference {
             Regle r ;
             while(!BDF.contains(a) && !BR.isEmpty() && Applicable() ){
 
-                RA.sort((o1, o2) -> o1.premise.size()>o2.premise.size()? -1:((o1.premise.size()<o2.premise.size()?1:(o1.indice>o2.indice?1:-1) )   ));
+                RA.sort((o1, o2) -> (o1.premise.size()<o2.premise.size()?1:(o1.indice<o2.indice? 1:(o1.premise.size()>o2.premise.size()? -1:0))     ));
                 r  = RA.get(0);
-
+                if(r.indice <22) PossiblePlants.add(r.conclusion);
                 BDF.add(r.conclusion);
 
                 BR.remove(r);
                 RA.clear();
-
 
             }
             return BDF.contains(a);

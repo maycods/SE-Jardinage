@@ -53,7 +53,7 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <ChoiceBox id="drainage" layoutX="39.0" layoutY="175.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
+      <ChoiceBox id="drainage" layoutX="39.0" layoutY="175.0" prefWidth="150.0" styleClass="choiceBox"  stylesheets="@styles.css" />
       <ChoiceBox id="soleil" layoutX="412.0" layoutY="175.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
       <ChoiceBox id="season" layoutX="39.0" layoutY="269.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
       <ChoiceBox id="eau" layoutX="39.0" layoutY="353.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />

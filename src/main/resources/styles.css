@@ -7,39 +7,41 @@
 }
 .title{
     -fx-font-family: "VAG Rounded bold";
-
     -fx-font-size: 36px;
     -fx-text-fill: white;
     -fx-border-color: white;
     -fx-text-alignment: center;
     -fx-border-style: solid;
     -fx-border-width: 0 0 3px 0;
-
     -fx-padding: 10px 58px;
     -fx-font-weight: bold;
 }
 .choiceTitle{
     -fx-font-size: 20px;
-    -fx-padding: 0 0 12px 0px;
+    -fx-padding: 0 0 16px 0px;
     -fx-text-fill: white;
     -fx-font-weight: bold;
     -fx-font-family: "VAG Rounded Bold";
 }
 .choiceBox{
-/*    a choice box that is transparent and have an underline border*/
+
+    -fx-base: #11672c;
     -fx-background-color: transparent;
     -fx-border-color: white ;
-    -fx-text-fill:white;
-    -fx-border-width: 0 0 3px 0;
+    -fx-border-width: 0 0 2px 0;
     -fx-border-style: solid;
     -fx-padding: 0 0 0 0;
-    -fx-font-size: 17px;
+    -fx-font-size: 15px;
     -fx-font-family: "VAG Rounded Bold";
     -fx-font-weight: bold;
-
 /*    add width*/
     -fx-pref-width: 200px;
 }
+.choiceBox:hover{
+    -fx-border-width: 0 0 4px 0;
+}
+
+
 .TitleMain{
 
     -fx-font-family: "VAG Rounded Bold";
@@ -47,7 +49,7 @@
     -fx-text-fill: White;
     -fx-font-weight: bold;
 }
-.buttonMain{/*e5f9e0*/
+.buttonMain{
     -fx-background-color: #708c64;
     -fx-text-fill: white;
     -fx-font-family: "VAG Rounded Bold";

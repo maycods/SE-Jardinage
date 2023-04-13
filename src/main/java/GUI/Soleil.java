@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public enum Soleil {
     PleinSoleil("Plein soleil"),
     OmbrePartielle("Ombre partielle"),
+    OmbreTotale("Ombre totale"),
 ;
     private String s;
     Soleil(String s) {

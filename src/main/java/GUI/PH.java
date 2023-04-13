@@ -3,7 +3,7 @@ package GUI;
 import java.util.ArrayList;
 
 public enum PH {
-    Acide( "Ph>7"),
+    Acide( "Ph>7"), 
     Neutre( "6<Ph<7"),
     Alkaline( "Ph<6"),
     ;

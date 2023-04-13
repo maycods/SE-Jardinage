@@ -2,7 +2,7 @@ package Main;
 
 import java.util.ArrayList;
 
-public class Regle {
+public class    Regle {
     ArrayList<String> premise;
     String conclusion;
     int indice ;
