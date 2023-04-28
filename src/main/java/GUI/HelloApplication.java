@@ -98,9 +98,7 @@ public class HelloApplication extends Application {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("plante validée");
                     alert.setHeaderText(null);
-                    alert.setContentText("Oui! vous pouvez planter le "+plants.getValue()+" dans votre jardin, d'ailleur voici " +
-                            "la liste complete des plantes que vous pouvez planter "
-                            +chainAv.PossiblePlants.toString());
+                    alert.setContentText("Oui! vous pouvez planter le "+plants.getValue()+" dans votre jardin");
 
                     alert.getButtonTypes().setAll(okButton);
                     Image iconImage = new Image("file:C:/Users/mayah/Documents/GitHub/demo/src/main/resources/icon.png");
@@ -111,7 +109,7 @@ public class HelloApplication extends Application {
 
                     javafx.scene.control.DialogPane dialogPane = alert.getDialogPane();
 
-                    // Apply custom CSS styles to the dialog pane
+
                     dialogPane.setStyle("-fx-background-color: white ");
                     dialogPane.lookupButton(okButton).setStyle("-fx-base: #bedb99 ;-fx-text-fill: #083b32");
                     alert.showAndWait().ifPresent(response -> {
@@ -160,40 +158,32 @@ public class HelloApplication extends Application {
     private static ArrayList<Regle> loadRegles(){
 
         ArrayList<Regle> br = new ArrayList<>();
-        br.add(new Regle(new ArrayList<>(Arrays.asList("Bien drainé","6<Ph<7", "Régulier")), "classe1", 22));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("Ph<6", "Mal drainé", "Humide")), "classe2", 23));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe1", "Plein soleil")), "catégorieA",26 ));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("Chaud", "Plein soleil", "Bien drainé", "Grand")), "classe4", 25));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("ph<6", "Humide", "Petit" )), "classe3",24 ));
 
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe3", "Grand" )), "Pastèque", 21));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe3", "Modérément drainé" )), "Gingembre", 14));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("catégorieA", "Tempéré")), "Roses", 15));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("catégorieA", "Tempéré")), "Pétunias", 16));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("catégorieA", "Chaud")), "Basilic", 17));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("catégorieA", "Chaud")), "œillets", 18));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("catégorieA", "Chaud")), "Tomates", 19));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe4", "Humide")), "Géranium", 20));
-
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe1", "Ombre partielle")), "Bégonias", 8));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe1", "Ombre partielle")), "Epinards", 2));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe1", "Ombre partielle")), "Laitue", 3));
-
-
-        br.add(new Regle(new ArrayList<>(Arrays.asList("catégoriea", "Froid")), "Carottes", 4));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("catégoriea", "Froid")), "Chou-fleur", 5));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("catégoriea", "Froid")), "Brocoli", 6));
-
-
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe2", "Tempéré")), "Myrtilles", 7));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe2", "Tempéré")), "Azalées", 8));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe2", "Tempéré")), "Hostas", 9));
-
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe2", "Chaud")), "Cannas", 10));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe2", "Chaud")), "PatateDouce", 11));
-
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe4","Rarement")), "Cactus", 12));
-        br.add(new Regle(new ArrayList<>(Arrays.asList("classe4","Rarement")), "Aloe vera", 13));
+        br.add(new Regle(new ArrayList<>(Arrays.asList("Ombre partielle","Mal drainé")), "BesoinOmbre", 22));//rouge ete->1
+        br.add(new Regle(new ArrayList<>(Arrays.asList("Plein soleil","Bien drainé", "Chaud")), "ToleranteSechresse", 23));///gris ph->1 rare->1 grand ->1
+        br.add(new Regle(new ArrayList<>(Arrays.asList("Plein soleil","Ph<6", "Chaud","Grand")), "BesoinChaleur", 24));//c bon blue
+        br.add(new Regle(new ArrayList<>(Arrays.asList("Plein soleil","Bien drainé","Ph<6")), "BesoinAcidite", 25));//orange   petit 1
+        br.add(new Regle(new ArrayList<>(Arrays.asList("Régulier","Ombre partielle","6<Ph<7","Bien drainé")), "BesoinHumidite", 26));//violet ete->1 reste->2
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinChaleur" )), "Pastèque", 21));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinAcidite","Chaud")), "Roses", 15));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("ToleranteSechresse")), "Pétunias", 16));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinAcidite","Petit")), "Basilic", 17));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("ToleranteSechresse")), "œillets", 18));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinChaleur" )), "Tomates", 19));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("ToleranteSechresse", "Grand")), "Géranium", 20));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinHumidite", "Chaud")), "Bégonias", 8));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinHumidite", "Tempéré")), "Epinards", 2));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinHumidite", "Tempéré")), "Laitue", 3));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinAcidite","Tempéré")), "Carottes", 4));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("Plein soleil","6<Ph<7","Grand")), "Chou-fleur", 5));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("Plein soleil","6<Ph<7","Tempéré")), "Brocoli", 6));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinAcidite","Humide")), "Myrtilles", 7));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinOmbre", "Tempéré")), "Azalées", 8));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinOmbre", "Grand")), "Hostas", 9));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinChaleur" )), "Cannas", 10));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("BesoinChaleur" )), "PatateDouce", 11));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("ToleranteSechresse","Rarement")), "Cactus", 12));
+            br.add(new Regle(new ArrayList<>(Arrays.asList("ToleranteSechresse","Ph>7")), "Aloe vera", 13));
         return br;
     }
 

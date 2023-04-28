@@ -3,8 +3,8 @@ package GUI;
 import java.util.ArrayList;
 
 public enum Espace {
-    Grand("grand"),
-    Petit("petit"),
+    Grand("Grand"),
+    Petit("Petit"),
     ;
     private String s;
     Espace(String s){
