@@ -16,15 +16,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class HelloApplication extends Application {
+public class GUI extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/hello-view.fxml"));
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(GUI.class.getResource("/hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setHeight(675);
         stage.setWidth(655);
-        stage.setTitle("Plants Advisor");
-        Image icon = new Image("file:C:/Users/mayah/Documents/GitHub/demo/src/main/resources/icon.png"); // Replace "icon.png" with your actual icon image file
+        stage.setTitle("Assistant jardinage");
+        Image icon = new Image("/icon.png"); 
+
         stage.getIcons().add(icon);
         stage.setScene(scene);
         stage.show();
@@ -58,13 +60,14 @@ public class HelloApplication extends Application {
                     || espace.getValue() == null || eau.getValue() == null || ph.getValue() == null || plants.getValue() == null) {
 
                 Alert alert = new Alert(Alert.AlertType.ERROR);
+                // alert.setGraphic(icon2);
                 alert.setTitle("Champ(s) vide(s) !");
                 alert.setHeaderText(null);
                 alert.setContentText("Veuillez remplir tous les champs");
+                
 
                 alert.getButtonTypes().setAll(okButton);
-                Image iconImage = new Image("file:C:/Users/mayah/Documents/GitHub/demo/src/main/resources/icon.png");
-                ImageView iconImageView = new ImageView(iconImage);
+                ImageView iconImageView = new ImageView(icon);
                 iconImageView.setFitWidth(48);
                 iconImageView.setFitHeight(48);
                 alert.setGraphic(iconImageView);
@@ -101,8 +104,7 @@ public class HelloApplication extends Application {
                     alert.setContentText("Oui! vous pouvez planter le "+plants.getValue()+" dans votre jardin");
 
                     alert.getButtonTypes().setAll(okButton);
-                    Image iconImage = new Image("file:C:/Users/mayah/Documents/GitHub/demo/src/main/resources/icon.png");
-                    ImageView iconImageView = new ImageView(iconImage);
+                   ImageView iconImageView = new ImageView(icon);
                     iconImageView.setFitWidth(48);
                     iconImageView.setFitHeight(58);
                     alert.setGraphic(iconImageView);
@@ -133,8 +135,7 @@ public class HelloApplication extends Application {
                                 " vous ne pouvez planter aucune autre plantes non plus");
                     }
                     alert.getButtonTypes().setAll(okButton);
-                    Image iconImage = new Image("file:C:/Users/mayah/Documents/GitHub/demo/src/main/resources/icon.png");
-                    ImageView iconImageView = new ImageView(iconImage);
+                    ImageView iconImageView = new ImageView(icon);
                     iconImageView.setFitWidth(48);
                     iconImageView.setFitHeight(58);
                     alert.setGraphic(iconImageView);

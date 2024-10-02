@@ -12,13 +12,13 @@
 <Pane id="back" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="626.0" prefWidth="650.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane  layoutX="14.0" layoutY="20.0" prefHeight="626.0" prefWidth="663.0" />
-      <Button id="check" layoutX="281.0" layoutY="536.0" mnemonicParsing="false" styleClass="buttonMain" text="Check">
+      <Button id="check" layoutX="281.0" layoutY="536.0" mnemonicParsing="false" styleClass="buttonMain" text="Lancer">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
       <ChoiceBox id="plant" layoutX="225.0" layoutY="454.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
-      <Label layoutX="296.0" layoutY="409.0" styleClass="TitleMain" stylesheets="@styles.css" text="Plant">
+      <Label layoutX="296.0" layoutY="409.0" styleClass="TitleMain" stylesheets="@styles.css" text="Plante">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -59,7 +59,7 @@
       <ChoiceBox id="eau" layoutX="39.0" layoutY="353.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
       <ChoiceBox id="espace" layoutX="412.0" layoutY="269.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
       <ChoiceBox id="ph" layoutX="412.0" layoutY="353.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@styles.css" />
-      <Label layoutX="141.0" layoutY="28.0" styleClass="title" stylesheets="@styles.css" text="Plants Advisor">
+      <Label layoutX="115.0" layoutY="28.0" styleClass="title" stylesheets="@styles.css" text="Assistant jardinage">
          <font>
             <Font size="36.0" />
          </font></Label>
